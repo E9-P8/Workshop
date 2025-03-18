@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magical Mystery Theater</title>
+    <link href="theater.css" rel="stylesheet" type="text/css" />
+    <script src="theater.js"></script>
+  </head>
+  <body>
+    <h1>Magical Mystery Theater</h1>
+    <!--Sezione per comprare i biglietti-->
+    <div>Benvenuto al Magical Mystery Theater!</div>
+    <form method="GET">
+      <!--action="" -->
+      <label>
+        Please enter your name
+        <input
+          type="text"
+          name="name"
+          id="name"
+          minlength="3"
+          maxlength="20"
+          required
+        /> </label
+      ><br />
+      <label>
+        Please enter your age
+        <input
+          type="text"
+          name="age"
+          id="age"
+          minlength="1"
+          maxlength="3"
+          required
+        /><br />
+        <label for="hour">Please insert the show time</label>
+        <select name="hour" id="hour">
+          <option value="select">Select a time</option>
+          <option value="Mattutino">Mattutino</option>
+          <option value="Pomeridiano">Pomeridiano</option>
+          <option value="Serale">Serale</option></select
+        ><br />
+      </label>
+      <button type="button" onclick="verifyDiscount()">Purchase Ticket</button>
+    </form>
+    <h2 id="ticket-price">Prezzo del biglietto: 20€</h2>
+  </body>
+
+  <script></script>
+</html>
