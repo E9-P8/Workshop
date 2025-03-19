@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Wild Waves Aquatic Park</title>
+    <script src="wildwaves.js"></script>
+    <link href="wildwaves.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div><h1>Wild Waves Aquatic Park</h1></div>
+
+    <form>
+      <label>
+        Please enter your name
+        <input
+          type="text"
+          name="name"
+          id="name"
+          minlength="3"
+          maxlength="20"
+          required
+        /> </label
+      ><br />
+
+      <label for="attraction">Which attraction do you want to visit?</label>
+      <select name="attraction" id="attraction">
+        <option value="select">Select an attraction</option>
+        <option value="wave">Wave pool</option>
+        <option value="water">Waterslide</option>
+        <option value="river">Lazy river</option></select
+      ><br />
+      <button type="button" onclick="buyTicket()">Purchase Attraction</button>
+
+      <h2 id="AllowAttraction">Please, fill all the field</h2>
+    </form>
+  </body>
+</html>
