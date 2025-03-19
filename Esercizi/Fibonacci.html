@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Questa serie di Fibonacci è visibile nella console</h1>
+  </body>
+
+  <script>
+    //inizializzare le due variabili che saranno sempre 0 e 1
+    let a = 0;
+    let b = 1;
+    let count = 0;
+    let n = prompt("Quanti cicli deve fare la sequenza?");
+
+    function printFibonacci(n) {
+      while (count < n) {
+        console.log(a);
+        let terza = a + b;
+        a = b;
+        b = terza;
+        console.log(a, b);
+
+        count++; // Make sure to increment count to not create an infinite loop
+      }
+    }
+  </script>
+</html>
