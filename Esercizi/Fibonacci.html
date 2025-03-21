@@ -13,10 +13,25 @@
     //inizializzare le due variabili che saranno sempre 0 e 1
     let a = 0;
     let b = 1;
-    let count = 0;
+    //let count = 0;
     let n = prompt("Quanti cicli deve fare la sequenza?");
 
+    for (let i = 0; i < n; i++) {
+      //console.log(a);
+      let terza = a + b;
+      a = b;
+      b = terza;
+      console.log(a, b);
+
+      i++; // Make sure to increment count to not create an infinite loop
+
+      console.log(a + b);
+    }
+
     function printFibonacci(n) {
+      /*
+    Usando ciclo while
+
       while (count < n) {
         console.log(a);
         let terza = a + b;
@@ -25,7 +40,7 @@
         console.log(a, b);
 
         count++; // Make sure to increment count to not create an infinite loop
-      }
+      } */
     }
   </script>
 </html>
