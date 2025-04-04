@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON Example</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h1>Ciao mondo</h1>
+    <p>Ciao a tutti sono Elisa e questo è solo HTML</p>
+    <button onclick="OpenWindow()">Click here</button>
+
+    <script type="text/javascript">
+      function OpenWindow() {
+        alert("ciao!");
+        let name = prompt("Come ti chiami?");
+
+        alert("Ciao " + name);
+      }
+
+      /*let companies = [
+              {
+                name: "Nucamp",
+                number_of_employees: 150,
+                CEO: "Ludo Fourrage",
+                glassdoorRating: 5.0,
+              },
+            ];*/
+
+      //Convertire l'oggetto in JSON
+
+      let companies = `[
+         {
+            "name": "Nucamp",
+            "number_of_employees": 150,
+            "CEO": "Ludo Fourrage",
+            "glassdoorRating": 5.0
+         },
+            {
+         "name": "Microsoft",
+         "number_of_employees": 150000,
+         "CEO": "Satya Nadella",
+         "glassdoorRating": 4.7
+      }
+      ]`;
+
+      companies = JSON.parse(companies);
+      console.log(companies);
+
+      console.log(companies[0].name); // prints "Nucamp"
+      console.log(companies[0].CEO); // prints "Ludo Fourrage"
+
+      let companiesString = JSON.stringify(companies);
+      console.log(companiesString);
+    </script>
+  </body>
+</html>
